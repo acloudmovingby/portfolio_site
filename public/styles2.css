@@ -8,136 +8,180 @@ html {
   box-sizing: inherit;
   padding: 0px;
   margin: 0px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
- background-color: #f0f0f0;
+  background-color: #d5d5d5;
 }
 
 .label {
-    color: white;
-    display: inline-block;
-    background-color: black;
-    padding:0.3rem 0.5rem;
-    font-size: 0.7rem;
-    border-radius: 4px;
+  color: white;
+  display: inline-block;
+  background-color: black;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 4px;
 }
 
 .header {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .info {
-    margin-top: 1rem;
-    max-width: 350px;
+  margin-top: 1rem;
+  max-width: 350px;
 }
 
 .link-btn {
-    border-radius: 15px;
-    background-color: rgba(255,255,255,0.3);
-    border: none;
-    padding: 0.8rem;
-    margin-top: 1rem;
-    font-weight: bold;
-    color: rgb(40,40,40);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: rgb(40, 40, 40);
 }
 
 .link-btn:hover {
-    background-color: rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
 }
 
 .container {
-    width: 100vw;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    background-color: #f0f0f0;
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #d5d5d5;
 }
 
 .tile {
-    background-color:white;
-    margin: 0px 0px 20px 0px;
-    padding: 2rem;
-    border-radius: 20px;
+  background-color: white;
+  margin: 0px 0px 20px 0px;
+  padding: 2rem;
+  border-radius: 20px;
 }
 
 .A {
-    grid-area: A;
-    background-image: url('path-distance-2.png');
-    background-position: right top;
-    color: white;
+  grid-area: A;
+  background-image: url("images/path-distance-2.png");
+  background-position: right top;
+  color: white;
 }
 
 .B {
-    background-color: white;
-    grid-area: B;
-    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d6e8ee;
+  grid-area: B;
+  position: relative;
+}
+
+.text-area {
+  flex: 1 0 225px;
 }
 
 .laptop-img {
-    position: absolute;
-    right: 2rem;
-    bottom: 2rem;
-    max-height: 50%;
-    max-width: 70%;
-  }
+  height: 180px;
+  width: 270px;
+  object-fit: scale-down;
+  object-position: bottom;
+  align-self: flex-end;
+}
 
 .C {
-    background-color: purple;
-    grid-area: C;
+  background-color: #f0f0f0;
+  grid-area: C;
+  background-image: url("images/drag-complete-tool-1.gif");
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .D {
-    background-color: blue;
-    grid-area: D;
+  background-color: blue;
+  grid-area: D;
 }
 
 .E {
-    background-color: pink;
-    grid-area: E;
+  background-color: pink;
+  grid-area: E;
+}
+
+.text-1 {
+  grid-area: text-1;
+}
+
+.text-2 {
+  grid-area: text-2;
+}
+
+.hi {
+  grid-area: hi;
+  text-align: center;
+  position: relative;
+  height: 80vh;
+}
+
+.hi-header {
+  font-family: "Reenie Beanie", serif;
+  font-size: 5rem;
+}
+
+.hi > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.hi-sub-header {
+    max-width: 370px;
 }
 
 @media screen and (min-width: 481px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-        "A B"
-        "A C"
-        "D D"
-        "E E";
-    }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 85vh repeat(4, 1fr);
+    grid-template-areas:
+      "hi hi"
+      "A B"
+      "A C"
+      "D D"
+      "E E";
+  }
 
-    .tile {
-        margin: 10px 10px 10px 10px;
-    }
+  .tile {
+    margin: 10px 10px 10px 10px;
+  }
 
-    .A {
-        height: auto;
-    }
+  .A {
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 990px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-        "A B B C"
-        "A D D C"
-        "E E E E";
-    }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 85vh repeat(4, 1fr);
+    grid-template-areas:
+      "hi hi hi hi"
+      "A B B text-1"
+      "A text-2 C C"
+      "D D D D"
+      "E E E E";
+  }
 
-    .A {
-        height: auto;
-    }
+  .A {
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .container {
-        width: 1200px;
-        margin: auto;
-    }
+  .container {
+    width: 1200px;
+    margin: auto;
+  }
 }
