@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: slategray;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 190px;
+  height: 200px;
+  background-color: midnightblue;
+}
+
+.item-1 {
+  width: 100px;
+  height: 100px;
+  flex: 0 0 auto;
+  background-color: lightsteelblue;
+}
+
+.item-2 {
+  height: 100px;
+  flex: 1 1 100px;
+  background-color: mediumaquamarine;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+  object-position: top;
+}
