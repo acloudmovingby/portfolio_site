@@ -65,7 +65,7 @@ body {
 .A {
   grid-area: A;
   background-image: url("images/path-distance-2.png");
-  background-position: right top;
+  background-position: center bottom;
   color: white;
 }
 
@@ -98,12 +98,19 @@ body {
 }
 
 .D {
-  background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+  background-color: white;
   grid-area: D;
 }
 
 .E {
-  background-color: pink;
+  background-image: url("images/candle-in-window.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #272624;
+  min-height: 400px;
   grid-area: E;
 }
 
@@ -136,20 +143,37 @@ body {
 }
 
 .hi-sub-header {
-    max-width: 370px;
+  max-width: 370px;
+}
+
+.E > .header {
+    color: white;
+}
+
+.E > .info {
+    color: white;
+}
+
+.clock-gif {
+  min-height: 300px;
+  max-height: 400px;
+  width: 400px;
+  object-fit: scale-down;
+  object-position: bottom;
 }
 
 @media screen and (min-width: 481px) {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 85vh repeat(4, 1fr);
+    grid-template-rows: 85vh repeat(2, 1fr) 1fr repeat(2,1fr);
     grid-template-areas:
       "hi hi"
       "A B"
       "A C"
       "D D"
-      "E E";
+      "text-1 E"
+      "text-2 E";
   }
 
   .tile {
@@ -165,13 +189,13 @@ body {
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 85vh repeat(4, 1fr);
+    grid-template-rows: 85vh repeat(3, 1fr) 1fr;
     grid-template-areas:
       "hi hi hi hi"
       "A B B text-1"
       "A text-2 C C"
-      "D D D D"
-      "E E E E";
+      "D D E E"
+      "D D E E";
   }
 
   .A {
