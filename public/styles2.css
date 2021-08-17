@@ -35,7 +35,7 @@ body {
 
 .link-btn {
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
   border: none;
   padding: 0.8rem;
   margin-top: 1rem;
@@ -43,8 +43,18 @@ body {
   color: rgb(40, 40, 40);
 }
 
+.graph-btn {
+  background-color: rgba(255, 166, 0, 0.3);
+}
+
+
+
 .link-btn:hover {
   background-color: rgb(255, 255, 255);
+}
+
+.graph-btn:hover {
+  background-color: rgb(255, 166, 0);
 }
 
 .container {
@@ -114,6 +124,8 @@ body {
   grid-area: E;
 }
 
+
+
 .text-1 {
   grid-area: text-1;
 }
@@ -166,6 +178,50 @@ body {
   text-align: center;
   color: rgb(94, 94, 94);
   margin: 3rem 0rem;
+}
+
+.text-1 {
+  line-height: 2rem;
+  text-align: center;
+  background-image: url("images/lined-notebook.gif");
+  background-position: 8% top;
+  padding: 10px;
+}
+
+.note-list {
+  margin-top: 25px;
+  list-style-type: none;
+}
+
+.note-list > li {
+  font-family: "Reenie Beanie", serif;
+  color: rgb(167, 77, 77);
+  font-size: 2rem;
+  line-height: 70px;
+}
+
+.text-1 > h1 {
+  font-family: "Reenie Beanie", serif;
+  color: rgb(255, 213, 136);
+  font-size: 3rem;
+}
+
+.text-2 {
+  background-image: url("images/lined-notebook.gif");
+  background-position: 20% 20%;
+  padding-top: 10px;
+}
+
+.text-2 > h1 {
+  font-family: "Reenie Beanie", serif;
+  color: rgb(255, 213, 136);
+  font-size: 3rem;
+}
+
+.text-2 > .info {
+  color: rgb(67, 67, 67);
+  line-height: 1.5rem;
+  margin-top: 12px;
 }
 
 @media screen and (min-width: 481px) {
