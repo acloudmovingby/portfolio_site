@@ -98,8 +98,8 @@ body {
 }
 
 .D {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
   background-color: white;
   grid-area: D;
 }
@@ -147,11 +147,11 @@ body {
 }
 
 .E > .header {
-    color: white;
+  color: white;
 }
 
 .E > .info {
-    color: white;
+  color: white;
 }
 
 .clock-gif {
@@ -162,11 +162,17 @@ body {
   object-position: bottom;
 }
 
+.footer-text {
+  text-align: center;
+  color: rgb(94, 94, 94);
+  margin: 3rem 0rem;
+}
+
 @media screen and (min-width: 481px) {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 85vh repeat(2, 1fr) 1fr repeat(2,1fr);
+    grid-template-rows: 85vh repeat(2, 1fr) 1fr repeat(2, 1fr);
     grid-template-areas:
       "hi hi"
       "A B"
