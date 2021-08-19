@@ -97,7 +97,7 @@ p {
 
 .laptop-img {
   height: 180px;
-  width: 270px;
+  max-width: 270px;
   object-fit: scale-down;
   object-position: bottom;
   align-self: flex-end;
@@ -108,7 +108,7 @@ p {
   grid-area: C;
   background-image: url("images/drag-complete-tool-1.gif");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: 60px bottom;
 }
 
 .D {
@@ -172,9 +172,8 @@ p {
 }
 
 .clock-gif {
-  min-height: 300px;
   max-height: 400px;
-  width: 400px;
+  width: 100%;
   object-fit: scale-down;
   object-position: bottom;
 }
@@ -233,7 +232,7 @@ p {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 85vh repeat(2, 1fr) 1fr repeat(2, 1fr);
+    grid-template-rows: 85vh repeat(5, auto);
     grid-template-areas:
       "hi hi"
       "A B"
@@ -256,12 +255,11 @@ p {
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 85vh repeat(3, 1fr) 1fr;
+    grid-template-rows: 85vh repeat(2, 1fr) auto;
     grid-template-areas:
       "hi hi hi hi"
       "A B B text-1"
       "A text-2 C C"
-      "D D E E"
       "D D E E";
   }
 
