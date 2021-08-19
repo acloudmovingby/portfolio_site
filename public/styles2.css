@@ -92,11 +92,12 @@ p {
 }
 
 .text-area {
-  flex: 1 0 225px;
+  flex: 1 0 200px;
 }
 
 .laptop-img {
   height: 180px;
+  width: 100%;
   max-width: 270px;
   object-fit: scale-down;
   object-position: bottom;
