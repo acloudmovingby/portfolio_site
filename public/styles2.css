@@ -48,7 +48,7 @@ p {
 }
 
 .graph-btn {
-  background-color: rgba(255, 166, 0, 0.3);
+  background-color: rgba(187, 179, 165, 0.3);
 }
 
 .figma-btn {
@@ -243,8 +243,8 @@ p {
     grid-template-rows: 85vh repeat(5, auto);
     grid-template-areas:
       "hi hi"
-      "A B"
       "A C"
+      "A B"
       "D D"
       "text-1 E"
       "text-2 E";
